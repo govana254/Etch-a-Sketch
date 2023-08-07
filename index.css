@@ -9,3 +9,9 @@
     grid-template-rows: repeat(var(--grid-rows));
     grid-template-columns: repeat(var(--grid-cols));
 }
+
+.grid-item {
+    padding: 1em;
+    border: 1px solid #0c0c0c;
+    text-align: center;
+}
