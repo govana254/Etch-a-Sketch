@@ -6,12 +6,17 @@
 #container {
     display: grid;
     grid-gap:1em;
-    grid-template-rows: repeat(var(--grid-rows));
-    grid-template-columns: repeat(var(--grid-cols));
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .grid-item {
     padding: 1em;
     border: 1px solid #0c0c0c;
-    text-align: center;
+    transition: ease 3s all;
+}
+
+.grid-item:hover {
+    background-color: blue;
+    transition: ease 0.1s all;
 }
