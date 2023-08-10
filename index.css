@@ -8,6 +8,7 @@
     grid-gap:1em;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
+    margin: 8px;
 }
 
 .grid-item {
@@ -19,4 +20,9 @@
 .grid-item:hover {
     background-color: blue;
     transition: ease 0.1s all;
+}
+
+.squares {
+    margin: 8px 8px;
+    padding: 4px;
 }
