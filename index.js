@@ -1,4 +1,16 @@
 const container = document.getElementById("container");
+const clear = document.querySelector("button");
+
+clear.addEventListener('click', ()=> {
+    resetSize()
+})
+
+function resetSize(){
+    let number = prompt ("What size would you like the grid to be? (1-100)");
+    container.style.gridTemplateRows = `repeat(${number}, 1fr)`
+    container.style.gridTemplateColumns = `repeat(${number}, 1fr)`
+    createGrid(number)
+}
 
 function makeRows(rows, cols) {
     container.style.setProperty('--grid-row', rows);
