@@ -1,4 +1,4 @@
-const container = document.getElementById("container");
+const container = document.querySelector(".container");
 const clear = document.querySelector("button");
 
 clear.addEventListener('click', ()=> {
@@ -13,8 +13,8 @@ function resetSize(){
 }
 
 function createGrid(size) {
-    container.style.setProperty('--grid-row', rows);
-    container.style.setProperty('--grid-cols', cols);
+    container.style.setTemplateRows =`repeat(${size}),1fr`;
+    container.style.setTemplateColumns =`repeat(${size}),1fr`;
     
     for (let c = 0; c < (size * size); c++) {
         
@@ -23,7 +23,7 @@ function createGrid(size) {
         container.appendChild(cell);
         
         cell.addEventListener("mouseover", e => {
-            cell.style.backgroundColor = "green";
+            cell.style.backgroundColor = "white";
         })
         function clearGrid(){
                 clear.addEventListener('click', e => {square.style.backgroundColor = "black"
