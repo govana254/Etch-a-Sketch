@@ -12,5 +12,6 @@ function makeRows(rows, cols) {
 makeRows(4, 4);
 
 function squareNumber () {
-    prompt ("Please enter the number of squares")
+    let squares = prompt ("Please enter the number of squares")
+    squares = Number(squares)
 }
