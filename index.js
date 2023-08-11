@@ -12,18 +12,26 @@ function resetSize(){
     createGrid(number)
 }
 
-function makeRows(rows, cols) {
+function createGrid(size) {
     container.style.setProperty('--grid-row', rows);
     container.style.setProperty('--grid-cols', cols);
-    for (let c = 0; c < (rows * cols); c++) {
+    
+    for (let c = 0; c < (size * size); c++) {
+        
         let cell = document.createElement("div");
-        container.appendChild(cell).className = "grid-item";
+        cell.style.backgroundColor = "black"
+        container.appendChild(cell);
+        
+        cell.addEventListener("mouseover", e => {
+            cell.style.backgroundColor = "green";
+        })
+        function clearGrid(){
+                clear.addEventListener('click', e => {square.style.backgroundColor = "black"
+            })
+        }
+
+        clearGrid()
     };
 };
 
-makeRows(4, 4);
-
-function squareNumber () {
-    let squares = prompt ("Please enter the number of squares")
-    squares = Number(squares)
-}
+createGrid(16);
