@@ -12,10 +12,10 @@ body {
 }
 
 .container {
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     display: grid;
-    margin: 2rem;
+    margin: 1rem;
     border: 2px solid burlywood;
 }
 
@@ -25,4 +25,9 @@ h1{
 
 button{
     width: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(190, 89, 94);
+    border: 2px solid rgb(190, 89, 94);
+    border-radius: 3px;
 }
